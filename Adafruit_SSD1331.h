@@ -22,7 +22,7 @@
 
 #define gfx_swap(a, b) { uint16_t t = a; a = b; b = t; }
 
-#ifdef __SAM3X8E__
+#if defined(__SAM3X8E__) || defined(__SAMD21G18A__)
 typedef volatile RwReg PortReg;
 typedef uint32_t PortMask;
 #define _BV(b) (1<<(b))
